@@ -1,0 +1,48 @@
+// Reference: Course Visual Learning Road map 
+// Recipe 1 How to Write the Basic Java Program: The Calculator
+package com.calculator.java;
+
+import java.util.Scanner;
+
+public class Calculator {
+	
+	public static void main(String[] args) {
+	   System.out.println("Welcome to Basic Java Calculator");
+	   
+	   System.out.println("Following Operations are available: \n" + "1. Addition (+) \n" 
+	   + "2. Subtraction (-) \n" + "3. Multiplication (*) \n" + "4. Division(/) \n");
+	   
+	   try(Scanner scanner = new Scanner(System.in)){
+		   
+		   System.out.println("Choose the Operator (+, -, *, /): ");
+		   char Operation = scanner.next().charAt(0);
+		   
+		  if(!(Operation == '+' || Operation == '-' || Operation == '*' || Operation == '/')){
+	      System.out.println("Invalid Operator");
+	      System.out.println("Please use + or - or * or /");
+		  }
+	   
+		  System.out.println("Enter first number: ");
+		  double number1 = scanner.nextDouble();
+		  
+		  System.out.println("Enter second number: ");
+		  double number2 = scanner.nextDouble();
+		  
+		  //if else or switch case statement
+		  
+		  if(Operation == '+' ){
+			  System.out.println( number1 + " + " + number2 + " = " + (number1 + number2));
+		  }else if (Operation == '-'){
+			  System.out.println( number1 + " - " + number2 + " = " + (number1 - number2));  
+		  }else if (Operation == '*'){
+			  System.out.println( number1 + " * " + number2 + " = " + (number1 * number2));  
+		  }else if (Operation == '/'){
+			  System.out.println( number1 + " / " + number2 + " = " + (number1 / number2));  
+		  }else{
+			  System.out.println("Invalid Operation");
+		  }
+	   
+	  }
+
+   }
+}
